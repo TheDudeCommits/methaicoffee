@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ME THAI COFFEE - Global Styles
+   ============================================ */
+
+:root {
+  /* Colors */
+  --coffee-brown: #5A3B2E;
+  --coffee-light: #8B6B4A;
+  --cream: #FAF8F5;
+  --cream-dark: #F5EDE6;
+  --warm-cream: #FBF7F2;
+  --terracotta: #B97A6A;
+  --terracotta-dark: #A66B5B;
+  --charcoal: #1A1A1A;
+  
+  /* Font families */
+  --font-display: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Typography scale - responsive */
+  --text-display: clamp(2rem, 5vw, 3.5rem);
+  --text-title: clamp(1.5rem, 3vw, 2.25rem);
+  --text-heading: clamp(1.125rem, 2vw, 1.375rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
+  
+  /* Line heights */
+  --leading-display: 1.15;
+  --leading-title: 1.3;
+  --leading-body: 1.6;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-display {
+  font-size: var(--text-display);
+  line-height: var(--leading-display);
+  letter-spacing: -0.02em;
+}
+
+.text-title {
+  font-size: var(--text-title);
+  line-height: var(--leading-title);
+  letter-spacing: -0.01em;
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+  line-height: var(--leading-title);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--coffee-brown);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--text-display); line-height: var(--leading-display); }
+h2 { font-size: var(--text-title); line-height: var(--leading-title); }
+h3 { font-size: var(--text-heading); line-height: var(--leading-title); }
+
+/* ============================================
+   Coffee Bean Animations
+   ============================================ */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(6px, -8px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-4px, -14px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(8px, -6px) rotate(1deg);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) translateX(4px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-6px) translateX(-3px) rotate(-1deg);
+  }
+}
+
+@keyframes beans-drift {
+  0%, 100% {
+    transform: translate(-50%, -20%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -20%) translateY(-6px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-50%, -20%) translateY(-10px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(-50%, -20%) translateY(-4px) rotate(0.5deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: scale(1.05) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+  40% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  60% {
+    transform: scale(1.05) rotate(-0.5deg);
+  }
+  80% {
+    transform: scale(1.05) rotate(0.5deg);
+  }
+}
+
+/* Animation classes */
+.animate-float-slow {
+  animation: float 12s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float 16s ease-in-out infinite;
+}
+
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: float-gentle 10s ease-in-out infinite;
+}
+
+.animate-beans-drift {
+  animation: beans-drift 13s ease-in-out infinite;
+}
+
+.group:hover .group-hover\:animate-shake {
+  animation: shake 0.6s ease-in-out;
+}
+
+/* ============================================
+   Reduced Motion Accessibility
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-float-slow,
+  .animate-float-slower,
+  .animate-drift,
+  .animate-float-gentle,
+  .animate-beans-drift {
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   Custom Focus States for Accessibility
+   ============================================ */
+
+:focus-visible {
+  outline: 2px solid var(--coffee-brown);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-8 py-4 bg-coffee-600 text-white font-medium rounded-2xl transition-all duration-300 hover:bg-coffee-700 hover:shadow-glow focus:ring-2 focus:ring-coffee-400 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 border-2 border-coffee-600 text-coffee-600 font-medium rounded-2xl transition-all duration-300 hover:bg-coffee-600 hover:text-white;
+}
+
+/* ============================================
+   Pill Badge Styles
+   ============================================ */
+
+.pill {
+  @apply inline-flex items-center gap-1.5 px-4 py-2 bg-white rounded-full text-sm font-medium text-coffee-700 shadow-soft;
+}
+
+/* ============================================
+   Section Spacing
+   ============================================ */
+
+.section-padding {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+.container-padding {
+  @apply px-6 md:px-8 lg:px-12;
+}
+
