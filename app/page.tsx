@@ -14,7 +14,7 @@
  * - /public/me-thai-poster.jpg - Brand poster (portrait, ~800x1000px)
  */
 
-import { Navbar, Hero, About, Contact, Reviews, Footer } from "@/components";
+import { Navbar, Hero, About, CoffeeProcess, Contact, Reviews, Footer } from "@/components";
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <CoffeeProcess />
         <Contact />
         <Reviews />
       </main>
