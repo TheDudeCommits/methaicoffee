@@ -81,13 +81,7 @@ export default function Contact() {
               Hours
             </h3>
             <p className="text-coffee-600">
-              Open daily
-            </p>
-            <p className="mt-2 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-coffee-700 font-medium">
-                Closes 7 PM
-              </span>
+              Daily from 7:30 AM to 7 PM
             </p>
           </div>
 
