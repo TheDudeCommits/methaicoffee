@@ -1,25 +1,40 @@
-import Image from "next/image";
+"use client";
 
-/**
- * Hero Section
- * Two-column layout: headline on left, cup image with beans on right.
- * Mobile: stacks vertically with image below text.
- */
+import Image from "next/image";
+import { useState, useRef, useCallback } from "react";
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [transform, setTransform] = useState({ rotateX: 0, rotateY: 0, scale: 1 });
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    
+    const rect = containerRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const mouseX = e.clientX - centerX;
+    const mouseY = e.clientY - centerY;
+    
+    const rotateY = (mouseX / (rect.width / 2)) * 8;
+    const rotateX = -(mouseY / (rect.height / 2)) * 6;
+    
+    setTransform({ rotateX, rotateY, scale: 1.02 });
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setTransform({ rotateX: 0, rotateY: 0, scale: 1 });
+  }, []);
+
   return (
     <section
       className="relative min-h-[60vh] flex items-center overflow-visible bg-[#FAFAFA]"
       aria-labelledby="hero-heading"
     >
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-8 lg:px-12 py-4 md:py-6 lg:pt-4 lg:pb-8">
-        {/* Two-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-          {/* Left Column - Text + Buttons */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            {/* <p className="text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
-              Every cup
-            </p> */}
             <h3 className="mt-2 font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight uppercase">
               <span className="text-blue-600">ME THAI COFFEE</span>
             </h3>
@@ -47,13 +62,22 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column - Cup Image + Single Floating Beans */}
-          <div className="relative order-1 lg:order-2 flex items-center justify-center w-full">
-            <div className="relative w-full max-w-xl">
-              {/* Subtle glow effect behind cup */}
+          <div 
+            ref={containerRef}
+            className="relative order-1 lg:order-2 flex items-center justify-center w-full cursor-pointer"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{ perspective: "1000px" }}
+          >
+            <div 
+              className="relative w-full max-w-xl transition-transform duration-200 ease-out"
+              style={{
+                transform: `rotateX(${transform.rotateX}deg) rotateY(${transform.rotateY}deg) scale(${transform.scale})`,
+                transformStyle: "preserve-3d",
+              }}
+            >
               <div className="hero-cup-glow" aria-hidden="true" />
 
-              {/* Single beans icon above the cup */}
               <Image
                 src="/beans.png"
                 alt="Coffee beans"
@@ -65,23 +89,25 @@ export default function Hero() {
                   top: "12%",
                   animationDelay: "-3s",
                   animationDuration: "15s",
+                  transform: "translateZ(30px)",
                 }}
               />
 
-              {/* Cup Image - larger and prominent with elegant effects */}
               <Image
                 src="/hero-cup.png"
                 alt="ME THAI COFFEE iced coffee cup with rich caramel color and the ME THAI logo"
                 width={1100}
                 height={1400}
-                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_25px_50px_rgba(90,59,46,0.3)] animate-cup-float transition-all duration-500 ease-out hover:drop-shadow-[0_35px_70px_rgba(90,59,46,0.4)] hover:scale-[1.02]"
+                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_25px_50px_rgba(90,59,46,0.35)] transition-all duration-300 ease-out"
+                style={{ transform: "translateZ(20px)" }}
+                quality={100}
                 priority
+                unoptimized
               />
             </div>
           </div>
         </div>
 
-        {/* Text Row Underneath - Smaller Typography */}
         <div className="text-center max-w-2xl mx-auto mt-8 lg:mt-12">
           <h3
             id="hero-heading"
@@ -93,7 +119,6 @@ export default function Hero() {
           <p className="mt-4 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
             Discover the taste of a real <span className="text-blue-600">thai</span> coffee.
           </p>
-
         </div>
       </div>
     </section>
