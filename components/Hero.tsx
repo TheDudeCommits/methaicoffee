@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           <h1
             id="hero-heading"
-            className="relative z-50 font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1C39BB] uppercase animate-title-reveal cursor-default transition-all duration-300 hover:-translate-y-1 hover:drop-shadow-[0_8px_16px_rgba(28,57,187,0.25)]"
+            className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1C39BB] tracking-tight uppercase"
           >
             ME THAI COFFEE
           </h1>

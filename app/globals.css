@@ -175,22 +175,6 @@ h3 { font-size: var(--text-heading); line-height: var(--leading-title); }
   animation: beans-drift 13s ease-in-out infinite;
 }
 
-@keyframes title-reveal {
-  0% {
-    opacity: 0;
-    letter-spacing: -0.05em;
-  }
-  100% {
-    opacity: 1;
-    letter-spacing: 0.02em;
-  }
-}
-
-.animate-title-reveal {
-  animation: title-reveal 0.8s ease-out forwards;
-  letter-spacing: 0.02em;
-}
-
 .group:hover .group-hover\:animate-shake {
   animation: shake 0.6s ease-in-out;
 }
