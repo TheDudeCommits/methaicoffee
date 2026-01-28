@@ -45,7 +45,7 @@ export default function Hero() {
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/menu"
-                className="inline-flex items-center justify-center px-6 py-3 border border-blue-600 text-blue-600 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-blue-600 hover:text-white"
+                className="inline-flex items-center justify-center px-6 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
               >
                 Explore
               </a>
@@ -119,7 +119,7 @@ export default function Hero() {
           </h3>
 
           <p className="mt-4 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
-            Discover the taste of a real <span className="text-blue-600">thai</span> coffee.
+            Discover the taste of a real <span className="text-[#1C39BB]">thai</span> coffee.
           </p>
         </div>
       </div>

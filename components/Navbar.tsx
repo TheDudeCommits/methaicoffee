@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="/"
-            className="flex items-center gap-2 text-coffee-800 transition-colors hover:text-blue-600"
+            className="flex items-center gap-2 text-coffee-800 transition-colors hover:text-[#1C39BB]"
             aria-label="ME THAI COFFEE - Home"
           >
             <Image
@@ -44,7 +44,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="flex items-center gap-1 uppercase transition-colors hover:text-blue-600 relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full"
+                    className="flex items-center gap-1 uppercase transition-colors hover:text-[#1C39BB] relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-[#1C39BB] after:transition-all after:duration-200 hover:after:w-full"
                   >
                     {link.label}
                   </a>
@@ -99,7 +99,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block py-2 text-coffee-700 font-medium uppercase tracking-[0.18em] hover:text-blue-600 transition-colors"
+                    className="block py-2 text-coffee-700 font-medium uppercase tracking-[0.18em] hover:text-[#1C39BB] transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
