@@ -76,21 +76,10 @@ export default function Hero() {
                 transformStyle: "preserve-3d",
               }}
             >
-              <div className="hero-cup-glow" aria-hidden="true" />
-
-              <Image
-                src="/beans.png"
-                alt="Coffee beans"
-                width={150}
-                height={100}
-                className="absolute z-20 w-[26%] h-auto object-contain animate-beans-drift"
-                style={{
-                  left: "calc(35% + 20px)",
-                  top: "12%",
-                  animationDelay: "-3s",
-                  animationDuration: "15s",
-                  transform: "translateZ(30px)",
-                }}
+              <div 
+                className="hero-cup-glow" 
+                aria-hidden="true" 
+                style={{ transform: "translateZ(-40px)" }}
               />
 
               <Image
@@ -98,11 +87,28 @@ export default function Hero() {
                 alt="ME THAI COFFEE iced coffee cup with rich caramel color and the ME THAI logo"
                 width={1100}
                 height={1400}
-                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_25px_50px_rgba(90,59,46,0.35)] transition-all duration-300 ease-out"
-                style={{ transform: "translateZ(20px)" }}
+                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_30px_60px_rgba(90,59,46,0.4)] transition-all duration-300 ease-out"
+                style={{ transform: "translateZ(0px)" }}
                 quality={100}
                 priority
                 unoptimized
+              />
+
+              <Image
+                src="/beans.png"
+                alt="Coffee beans"
+                width={180}
+                height={120}
+                className="absolute z-30 w-[30%] h-auto object-contain animate-beans-drift"
+                style={{
+                  left: "50%",
+                  top: "-8%",
+                  marginLeft: "-15%",
+                  animationDelay: "-3s",
+                  animationDuration: "12s",
+                  transform: "translateZ(80px)",
+                  filter: "drop-shadow(0 15px 25px rgba(90,59,46,0.3))",
+                }}
               />
             </div>
           </div>
