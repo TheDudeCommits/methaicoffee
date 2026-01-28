@@ -1,32 +1,39 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const processSteps = [
   {
     id: 1,
     title: "Harvest",
     description: "Hand-picking ripe coffee cherries from highland farms",
+    image: "/process-harvest.jpg",
   },
   {
     id: 2,
     title: "Sort & Soak",
     description: "Sorting the finest cherries and soaking overnight",
+    image: "/process-sort.jpg",
   },
   {
     id: 3,
     title: "Sun Dry",
     description: "Drying under natural sunlight for 10-15 days",
+    image: "/process-dry.jpg",
   },
   {
     id: 4,
     title: "Store",
     description: "Preserving quality in controlled conditions",
+    image: "/process-store.jpg",
   },
 ];
 
 export default function CoffeeProcess() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
+
+  const activeStepData = processSteps.find((s) => s.id === activeStep);
 
   return (
     <section className="py-20 md:py-28" aria-labelledby="process-heading">
@@ -58,7 +65,7 @@ export default function CoffeeProcess() {
               >
                 <div className={`hidden md:block w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"}`}>
                   <div
-                    className={`inline-block transition-all duration-300 ${
+                    className={`inline-block transition-all duration-300 cursor-pointer ${
                       activeStep === step.id ? "transform scale-105" : ""
                     }`}
                   >
@@ -115,6 +122,32 @@ export default function CoffeeProcess() {
                 )}
               </div>
             ))}
+          </div>
+
+          <div
+            className={`hidden md:block fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none transition-all duration-300 ${
+              activeStepData ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            }`}
+          >
+            {activeStepData && (
+              <div className="relative">
+                <div className="absolute -inset-3 bg-white rounded-lg shadow-2xl" />
+                <div className="relative w-72 h-48 rounded overflow-hidden border-4 border-white shadow-xl">
+                  <Image
+                    src={activeStepData.image}
+                    alt={activeStepData.title}
+                    fill
+                    className="object-cover"
+                    sizes="288px"
+                  />
+                </div>
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white px-4 py-1 rounded-full shadow-md">
+                  <span className="text-xs font-medium text-coffee-600 uppercase tracking-wider">
+                    {activeStepData.title}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
