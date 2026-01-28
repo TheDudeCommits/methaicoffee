@@ -92,7 +92,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-medium text-coffee-700 tracking-wide">
+          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-medium text-coffee-700 tracking-wide uppercase">
             Every Cup Tells a Story
           </p>
 

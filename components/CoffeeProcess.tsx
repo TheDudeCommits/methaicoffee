@@ -42,7 +42,7 @@ export default function CoffeeProcess() {
           </span>
           <h2
             id="process-heading"
-            className="font-sans text-3xl sm:text-4xl font-semibold text-coffee-800 tracking-tight"
+            className="font-sans text-3xl sm:text-4xl font-semibold text-coffee-800 tracking-tight uppercase"
           >
             Natural Dry Process
           </h2>
@@ -72,10 +72,10 @@ export default function CoffeeProcess() {
                       <span className="text-xs font-medium text-coffee-400 uppercase tracking-[0.15em]">
                         Step {String(step.id).padStart(2, "0")}
                       </span>
-                      <h3 className="text-xl font-semibold text-coffee-800 mt-1">
+                      <h3 className="text-xl font-semibold text-coffee-800 mt-1 uppercase">
                         {step.title}
                       </h3>
-                      <p className="text-sm text-coffee-500 mt-2 max-w-xs inline-block">
+                      <p className="text-sm text-coffee-500 mt-2 max-w-xs inline-block uppercase">
                         {step.description}
                       </p>
                     </div>
@@ -122,10 +122,10 @@ export default function CoffeeProcess() {
                       <span className="text-xs font-medium text-coffee-400 uppercase tracking-[0.15em]">
                         Step {String(step.id).padStart(2, "0")}
                       </span>
-                      <h3 className="text-lg font-semibold text-coffee-800 mt-1">
+                      <h3 className="text-lg font-semibold text-coffee-800 mt-1 uppercase">
                         {step.title}
                       </h3>
-                      <p className="text-sm text-coffee-500 mt-1">
+                      <p className="text-sm text-coffee-500 mt-1 uppercase">
                         {step.description}
                       </p>
                     </div>
