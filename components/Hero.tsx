@@ -50,9 +50,9 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           <h1
             id="hero-heading"
-            className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1C39BB] tracking-tight"
+            className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#1C39BB] tracking-tight uppercase"
           >
-            Me Thai Coffee
+            ME THAI COFFEE
           </h1>
 
           <div 
@@ -121,20 +121,20 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-medium text-coffee-700 tracking-wide">
+          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-medium text-coffee-700 tracking-wide uppercase">
             Every Cup Tells a Story
           </p>
 
           <div className="mt-8 flex flex-row gap-4 justify-center">
             <a
               href="/menu"
-              className="inline-flex items-center justify-center w-40 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
+              className="inline-flex items-center justify-center w-40 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
             >
               Menu
             </a>
             <a
               href="#about"
-              className="inline-flex items-center justify-center w-40 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
+              className="inline-flex items-center justify-center w-40 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
             >
               About Us
             </a>
