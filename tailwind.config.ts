@@ -40,6 +40,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "Cambria", "Times New Roman", "serif"],
         body: ["var(--font-body)", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        bebas: ["var(--font-bebas)", "Impact", "Haettenschweiler", "Arial Narrow Bold", "sans-serif"],
       },
       fontSize: {
         display: ["var(--text-display)", { lineHeight: "var(--leading-display)" }],

@@ -36,7 +36,11 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center">
           <h1
             id="hero-heading"
-            className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1C39BB] tracking-tight uppercase"
+            className="font-bebas text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#1C39BB] tracking-wider uppercase"
+            style={{
+              textShadow: "2px 2px 0 rgba(28, 57, 187, 0.3), 3px 3px 0 rgba(28, 57, 187, 0.15)",
+              letterSpacing: "0.08em",
+            }}
           >
             ME THAI COFFEE
           </h1>
