@@ -87,7 +87,7 @@ export default function Hero() {
                 alt="ME THAI COFFEE iced coffee cup with rich caramel color and the ME THAI logo"
                 width={1100}
                 height={1400}
-                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_30px_60px_rgba(90,59,46,0.4)] transition-all duration-300 ease-out"
+                className="relative z-10 w-auto h-[280px] sm:h-[340px] md:h-[400px] lg:h-[500px] xl:h-[580px] object-contain drop-shadow-[0_20px_40px_rgba(90,59,46,0.35)] sm:drop-shadow-[0_25px_50px_rgba(90,59,46,0.38)] lg:drop-shadow-[0_30px_60px_rgba(90,59,46,0.4)] transition-all duration-300 ease-out"
                 style={{ transform: "translateZ(0px)" }}
                 quality={100}
                 priority
@@ -99,15 +99,15 @@ export default function Hero() {
                 alt="Coffee beans"
                 width={180}
                 height={120}
-                className="absolute z-30 w-[30%] h-auto object-contain animate-beans-drift"
+                className="absolute z-30 w-[22%] sm:w-[24%] md:w-[26%] lg:w-[28%] xl:w-[30%] h-auto object-contain animate-beans-drift"
                 style={{
                   left: "50%",
-                  top: "-8%",
-                  marginLeft: "-15%",
+                  top: "-5%",
+                  marginLeft: "-12%",
                   animationDelay: "-3s",
                   animationDuration: "12s",
                   transform: "translateZ(80px)",
-                  filter: "drop-shadow(0 15px 25px rgba(90,59,46,0.3))",
+                  filter: "drop-shadow(0 12px 20px rgba(90,59,46,0.25))",
                 }}
               />
             </div>
