@@ -7,6 +7,8 @@ const reviews = [
     author: "K L",
     badge: "Local Guide",
     rating: 5,
+    avatarBg: "#F59E0B",
+    avatarEmoji: "🦌",
   },
   {
     quote:
@@ -14,6 +16,8 @@ const reviews = [
     author: "Christian Breitkreutz",
     badge: "Local Guide",
     rating: 5,
+    avatarBg: "#9CA3AF",
+    initials: "C",
   },
   {
     quote:
@@ -21,6 +25,8 @@ const reviews = [
     author: "Bababa",
     badge: "",
     rating: 5,
+    avatarBg: "#A855F7",
+    initials: "바",
   },
   {
     quote:
@@ -28,6 +34,8 @@ const reviews = [
     author: "MonZterella Lee",
     badge: "Local Guide",
     rating: 5,
+    avatarBg: "#22C55E",
+    initials: "M",
   },
   {
     quote:
@@ -35,6 +43,8 @@ const reviews = [
     author: "Dorji",
     badge: "Local Guide",
     rating: 5,
+    avatarBg: "#F97316",
+    initials: "D",
   },
 ];
 
@@ -77,7 +87,12 @@ function ReviewCard({ review }: { review: typeof reviews[0] }) {
   return (
     <blockquote className="flex-shrink-0 w-[340px] md:w-[400px] bg-white rounded-2xl p-6 shadow-soft">
       <div className="flex items-center gap-3 mb-4">
-        <GoogleIcon />
+        <div
+          className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-medium"
+          style={{ backgroundColor: review.avatarBg }}
+        >
+          {review.avatarEmoji || review.initials}
+        </div>
         <div className="flex gap-0.5" aria-label={`${review.rating} out of 5 stars`}>
           {[...Array(5)].map((_, i) => (
             <StarIcon key={i} filled={i < review.rating} />
