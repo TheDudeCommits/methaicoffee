@@ -180,6 +180,51 @@ h3 { font-size: var(--text-heading); line-height: var(--leading-title); }
 }
 
 /* ============================================
+   Navbar Wood Texture
+   ============================================ */
+
+.navbar-wood {
+  position: relative;
+  background-color: rgba(250, 248, 245, 0.9);
+}
+
+.navbar-wood::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 107, 74, 0.15) 2px,
+      rgba(139, 107, 74, 0.15) 3px,
+      transparent 3px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 8px,
+      rgba(90, 59, 46, 0.08) 8px,
+      rgba(90, 59, 46, 0.08) 9px,
+      transparent 9px,
+      transparent 25px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(139, 107, 74, 0.03) 0%,
+      rgba(166, 130, 100, 0.05) 25%,
+      rgba(139, 107, 74, 0.03) 50%,
+      rgba(166, 130, 100, 0.04) 75%,
+      rgba(139, 107, 74, 0.03) 100%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ============================================
    Reduced Motion Accessibility
    ============================================ */
 

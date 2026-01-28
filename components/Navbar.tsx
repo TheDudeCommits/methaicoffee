@@ -13,7 +13,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-sm navbar-wood">
       <nav
         className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12"
         aria-label="Main navigation"
