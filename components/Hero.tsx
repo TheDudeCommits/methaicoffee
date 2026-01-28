@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
             <h3 className="mt-2 font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight uppercase">
-              <span className="text-blue-600">ME THAI COFFEE</span>
+              <span className="text-[#1C39BB]">ME THAI COFFEE</span>
             </h3>
             <h3 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-coffee-800 leading-tight tracking-tight uppercase">
               EVERY CUP TELLS A STORY
