@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[60vh] flex items-center overflow-visible bg-[#FAFAFA]"
+      className="relative min-h-[60vh] flex items-center overflow-visible"
       aria-labelledby="hero-heading"
     >
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-8 lg:px-12 py-4 md:py-6 lg:pt-4 lg:pb-8">
