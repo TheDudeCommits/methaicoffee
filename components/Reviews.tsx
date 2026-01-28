@@ -136,7 +136,7 @@ export default function Reviews() {
 
       <div className="mt-8 text-center">
         <a
-          href="https://maps.google.com"
+          href="https://www.google.com/maps/place/ME+THAI+COFFEE/@13.7186807,100.5737306,17z/data=!4m8!3m7!1s0x311d630b3d8e3ec9:0xc62766ad87fbce70!8m2!3d13.7186755!4d100.5763055!9m1!1b1!16s%2Fg%2F11hds_9nlm?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-coffee-500 hover:text-[#1C39BB] transition-colors"
