@@ -42,10 +42,6 @@ export default function Hero() {
               EVERY CUP TELLS A STORY
             </h3>
 
-            <p className="mt-4 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
-              At "ME THAI COFFEE", we believe that coffee is more than just a beverage.
-            </p>
-
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/menu"
