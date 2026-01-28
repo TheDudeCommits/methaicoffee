@@ -39,7 +39,7 @@ export default function Hero() {
               <span className="text-blue-600">ME THAI COFFEE</span>
             </h3>
             <h3 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-coffee-800 leading-tight tracking-tight uppercase">
-              TELLS A STORY
+              EVERY CUP TELLS A STORY
             </h3>
 
             <p className="mt-4 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
