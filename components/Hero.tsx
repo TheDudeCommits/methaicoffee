@@ -99,13 +99,13 @@ export default function Hero() {
           <div className="mt-8 flex flex-row gap-4 justify-center">
             <a
               href="/menu"
-              className="inline-flex items-center justify-center px-8 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
+              className="inline-flex items-center justify-center w-40 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
             >
               Menu
             </a>
             <a
               href="#about"
-              className="inline-flex items-center justify-center px-8 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
+              className="inline-flex items-center justify-center w-40 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
             >
               About Us
             </a>
