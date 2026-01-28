@@ -35,10 +35,10 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl w-full px-6 md:px-8 lg:px-12 py-4 md:py-6 lg:pt-4 lg:pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
-            <h3 className="mt-2 font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight tracking-tight uppercase">
+            <h3 className="mt-2 font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight uppercase">
               <span className="text-blue-600">ME THAI COFFEE</span>
             </h3>
-            <h3 className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-coffee-800 leading-tight tracking-tight uppercase">
+            <h3 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-coffee-800 leading-tight tracking-tight uppercase">
               EVERY CUP TELLS A STORY
             </h3>
 
