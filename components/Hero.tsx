@@ -50,6 +50,9 @@ export default function Hero() {
           {/* Right Column - Cup Image + Single Floating Beans */}
           <div className="relative order-1 lg:order-2 flex items-center justify-center w-full">
             <div className="relative w-full max-w-xl">
+              {/* Subtle glow effect behind cup */}
+              <div className="hero-cup-glow" aria-hidden="true" />
+
               {/* Single beans icon above the cup */}
               <Image
                 src="/beans.png"
@@ -65,13 +68,13 @@ export default function Hero() {
                 }}
               />
 
-              {/* Cup Image - larger and prominent */}
+              {/* Cup Image - larger and prominent with elegant effects */}
               <Image
                 src="/hero-cup.png"
                 alt="ME THAI COFFEE iced coffee cup with rich caramel color and the ME THAI logo"
                 width={1100}
                 height={1400}
-                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_30px_60px_rgba(90,59,46,0.22)] transition-transform duration-500 ease-out group-hover:scale-105"
+                className="relative z-10 w-auto h-[360px] sm:h-[420px] md:h-[480px] lg:h-[620px] xl:h-[700px] object-contain drop-shadow-[0_25px_50px_rgba(90,59,46,0.3)] animate-cup-float transition-all duration-500 ease-out hover:drop-shadow-[0_35px_70px_rgba(90,59,46,0.4)] hover:scale-[1.02]"
                 priority
               />
             </div>
