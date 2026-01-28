@@ -29,44 +29,27 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-[60vh] flex items-center overflow-visible"
+      className="relative min-h-[85vh] flex items-center justify-center overflow-visible"
       aria-labelledby="hero-heading"
     >
-      <div className="relative mx-auto max-w-7xl w-full px-6 md:px-8 lg:px-12 py-4 md:py-6 lg:pt-4 lg:pb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <h3 className="mt-2 font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight uppercase">
-              <span className="text-[#1C39BB]">ME THAI COFFEE</span>
-            </h3>
-            <h3 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-coffee-800 leading-tight tracking-tight uppercase">
-              EVERY CUP TELLS A STORY
-            </h3>
-
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="/menu"
-                className="inline-flex items-center justify-center px-6 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
-              >
-                Explore
-              </a>
-              <a
-                href="#about"
-                className="inline-flex items-center justify-center px-6 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
-              >
-                Find Store
-              </a>
-            </div>
-          </div>
+      <div className="relative mx-auto max-w-5xl w-full px-6 md:px-8 lg:px-12 py-8 md:py-12">
+        <div className="flex flex-col items-center text-center">
+          <h1
+            id="hero-heading"
+            className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1C39BB] tracking-tight uppercase"
+          >
+            ME THAI COFFEE
+          </h1>
 
           <div 
             ref={containerRef}
-            className="relative order-1 lg:order-2 flex items-center justify-center w-full cursor-pointer"
+            className="relative flex items-center justify-center w-full my-6 md:my-8 cursor-pointer"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{ perspective: "1000px" }}
           >
             <div 
-              className="relative w-full max-w-xl transition-transform duration-200 ease-out"
+              className="relative transition-transform duration-200 ease-out"
               style={{
                 transform: `rotateX(${transform.rotateX}deg) rotateY(${transform.rotateY}deg) scale(${transform.scale})`,
                 transformStyle: "preserve-3d",
@@ -83,7 +66,7 @@ export default function Hero() {
                 alt="ME THAI COFFEE iced coffee cup with rich caramel color and the ME THAI logo"
                 width={1100}
                 height={1400}
-                className="relative z-10 w-auto h-[280px] sm:h-[340px] md:h-[400px] lg:h-[500px] xl:h-[580px] object-contain drop-shadow-[0_20px_40px_rgba(90,59,46,0.35)] sm:drop-shadow-[0_25px_50px_rgba(90,59,46,0.38)] lg:drop-shadow-[0_30px_60px_rgba(90,59,46,0.4)] transition-all duration-300 ease-out"
+                className="relative z-10 w-auto h-[260px] sm:h-[320px] md:h-[380px] lg:h-[440px] object-contain drop-shadow-[0_20px_40px_rgba(90,59,46,0.35)] sm:drop-shadow-[0_25px_50px_rgba(90,59,46,0.38)] lg:drop-shadow-[0_30px_60px_rgba(90,59,46,0.4)] transition-all duration-300 ease-out"
                 style={{ transform: "translateZ(0px)" }}
                 quality={100}
                 priority
@@ -95,11 +78,11 @@ export default function Hero() {
                 alt="Coffee beans"
                 width={180}
                 height={120}
-                className="absolute z-30 w-[22%] sm:w-[24%] md:w-[26%] lg:w-[28%] xl:w-[30%] h-auto object-contain animate-beans-drift"
+                className="absolute z-30 w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] h-auto object-contain animate-beans-drift"
                 style={{
                   left: "50%",
-                  top: "-5%",
-                  marginLeft: "-12%",
+                  top: "-8%",
+                  marginLeft: "-45px",
                   animationDelay: "-3s",
                   animationDuration: "12s",
                   transform: "translateZ(80px)",
@@ -108,19 +91,25 @@ export default function Hero() {
               />
             </div>
           </div>
-        </div>
 
-        <div className="text-center max-w-2xl mx-auto mt-8 lg:mt-12">
-          <h3
-            id="hero-heading"
-            className="font-sans text-3xl sm:text-4xl md:text-[2.6rem] font-semibold text-coffee-800 leading-tight tracking-tight"
-          >
-            FULLBODY FRUITY
-          </h3>
-
-          <p className="mt-4 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
-            Discover the taste of a real <span className="text-[#1C39BB]">thai</span> coffee.
+          <p className="font-sans text-xl sm:text-2xl md:text-3xl font-medium text-coffee-700 tracking-wide">
+            Every Cup Tells a Story
           </p>
+
+          <div className="mt-8 flex flex-row gap-4 justify-center">
+            <a
+              href="/menu"
+              className="inline-flex items-center justify-center px-8 py-3 border border-[#1C39BB] text-[#1C39BB] text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-[#1C39BB] hover:text-white"
+            >
+              Menu
+            </a>
+            <a
+              href="#about"
+              className="inline-flex items-center justify-center px-8 py-3 border border-coffee-600 text-coffee-700 text-xs font-medium tracking-[0.18em] uppercase rounded-full transition-all duration-300 hover:bg-coffee-700 hover:text-white"
+            >
+              About Us
+            </a>
+          </div>
         </div>
       </div>
     </section>
