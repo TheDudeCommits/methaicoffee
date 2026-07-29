@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar() {
       >
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a
+          <Link
             href="/"
             className="flex items-center gap-2 text-coffee-800 transition-colors hover:text-[#1C39BB]"
             aria-label="ME THAI COFFEE - Home"
@@ -35,7 +36,7 @@ export default function Navbar() {
             <span className="text-xs font-medium tracking-[0.18em] uppercase text-coffee-700">
               ME THAI COFFEE
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-10">
