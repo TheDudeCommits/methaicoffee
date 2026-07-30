@@ -65,7 +65,7 @@ export default function MenuPage() {
             {/* Editorial Text */}
             <div className="order-2 lg:order-1">
               <p className="font-sans text-3xl sm:text-4xl md:text-5xl font-semibold text-coffee-800 leading-tight tracking-tight">
-                At <span className="text-[#1C39BB]">"ME THAI COFFEE"</span>, we believe that coffee is more than just a
+                At <span className="text-[#1C39BB]">&ldquo;ME THAI COFFEE&rdquo;</span>, we believe that coffee is more than just a
                 beverage.
               </p>
               <p className="mt-6 text-xs font-medium tracking-[0.18em] text-coffee-700 uppercase">
@@ -149,4 +149,3 @@ export default function MenuPage() {
     </div>
   );
 }
-
